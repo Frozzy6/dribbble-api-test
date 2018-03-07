@@ -1,0 +1,185 @@
+.content {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.content>.wrap {
+  margin: 0 26px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  display: inline-block;
+  background-color: #ffffff;
+  box-shadow: 0 0 15.8px 0.2px rgba(0, 0, 0, 0.13);
+  color: black;
+  padding: 12px 12px 0 12px;
+  margin-bottom: 34px;
+  margin-left: 17px;
+  margin-right: 17px;
+  cursor: pointer;
+  &:hover .card__preview-img-hover {
+    opacity: 1;
+  }
+}
+
+.card__preview {
+  position: relative;
+  width: 251px;
+  height: 172px;
+}
+
+.card__preview-img {
+  width: 100%;
+  height: 100%;
+}
+
+.card__preview-img-hover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 66, 0, .7);
+  opacity: 0;
+}
+
+.card__preview-hover-text {
+  position: absolute;
+  bottom: 0;
+  height: 61px;
+  background: #333;
+  background: rgba(51,51,51,.7);
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding-left: 11px;
+  padding-top: 10px;
+  padding-right: 23px;
+  line-height: 22px;
+}
+
+.card__date {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  width: 92px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__info-author, .meta, .meta__likes, .meta__views {
+  display: inline-block;
+}
+
+.card__info {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.card__info .meta {
+  float: right;
+}
+
+.meta__likes, .meta__views {
+  font-size: 14px;
+  color: #868686;
+  position: relative;
+}
+
+.meta__likes {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.meta__likes::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 17px;
+  height: 16px;
+  top: 0;
+  left: -4px;
+  background: url('/img/heart.png')
+}
+
+.meta__views {
+  padding-left: 20px;
+}
+
+.meta__views:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  top: 0;
+  left: -4px;
+  background: url('/img/eye.png')
+}
+
+.card__info-author {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media ( max-width: 970px ) {
+  .content {
+    padding-top: 30px;
+  }
+
+  .content>.wrap {
+    margin: 0 15px;
+  }
+  .card {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .card__preview {
+    width: 315px;
+    height: 216px;
+  }
+}
+
+@media ( max-width: 790px ) {
+  .content>.wrap {
+    margin: 0 7px;
+  }
+
+  .card {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+
+  .card__preview {
+    width: 266px;
+    height: 182px;
+  }
+}
+
+@media ( max-width: 650px ) {
+  .content {
+    padding-top: 15px;
+  }
+  .card__preview {
+    width: 315px;
+    height: 216px;
+  }
+}
+
+@media ( max-width: 430px ) {
+  .card__preview {
+    width: 266px;
+    height: 182px;
+  }
+}

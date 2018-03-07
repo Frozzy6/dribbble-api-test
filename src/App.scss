@@ -1,0 +1,37 @@
+$background: #f4f5f6;
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: all .3s;
+}
+
+body {
+  background: $background;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+}
+
+.no-scroll {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.wrap {
+  margin: 0 50px;
+}
+
+@media ( max-width: 970px ) {
+  .wrap {
+    margin: 0 30px;
+  }
+}
+
+@media ( max-width: 400px ) {
+  .wrap {
+    margin: 0 15px;
+  }
+}

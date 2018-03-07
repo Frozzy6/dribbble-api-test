@@ -1,0 +1,294 @@
+.app-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+  overflow-y: scroll;
+}
+
+.app-modal {
+  width: 880px;
+  background: white;
+  margin: 0 auto;
+  margin-top: 36px;
+  outline: none;
+  position: relative;
+  padding-bottom: 70px;
+  margin-bottom: 50px;
+
+}
+
+.app-modal__cloase-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+
+  .fa {
+    font-size: 30px;
+    color: #e6e6e6;
+  }
+  &:hover .fa {
+    color: black;
+  }
+}
+
+.app-modal__figure {
+  width: 800px;
+  padding: 40px;
+  padding-bottom: 30px;
+}
+
+.app-modal__about {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.app-modal__info-layout {
+  width: 515px
+}
+
+.app-modal__info-author {
+  width: 250px;
+}
+
+.app-modal__meta-data {
+  font-size: 18px;
+  color: #898989;
+  padding-right: 21px;
+}
+
+.app-modal__meta-likes-count,
+.app-modal__meta-views-count {
+  font-size: 14px;
+  color: #898989;
+}
+
+.app-modal__meta-likes-count {
+  padding-right: 10px;
+}
+
+.app-modal__header {
+  color: #000;
+  font-size: 46px;
+  line-height: 50px;
+}
+
+.app-modal__text {
+  font-size: 16px;
+  color: #000;
+  margin-top: 24px;
+}
+
+.app-modal__text p {
+  line-height: 1.2;
+}
+.app-modal__text p:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.app-modal__info-author {
+  background: rgb(244,244,244);
+  color: #707070;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-author__avatar {
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+  margin-top: 20px;
+}
+
+.info-author__avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+.app-modal__meta-row {
+  margin-bottom: 18px;
+}
+
+.info-author__name {
+  color: black;
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.info-author__username {
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.info-author__location {
+  font-size: 16px;
+  margin-top: 11px;
+}
+
+.info-author__divider {
+  width: 210px;
+  margin-top: 15px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.info-author__links {
+  margin-top: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 30%;
+}
+
+.info-author__links-web {
+  display: block;
+  width: 27px;
+  height: 27px;
+  background: url(/img/web.png);
+  background-size: contain;
+}
+
+.info-author__links-twitter {
+  display: block;
+  width: 27px;
+  height: 27px;
+  background: url(/img/twitter.png);
+  background-size: contain;
+}
+
+.info-author__bio {
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 24px;
+  padding-bottom: 35px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.fa.fa-heart, .fa.fa-eye {
+  padding-right: 4px;
+}
+
+.app-modal__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media ( max-width: 930px ) {
+  .app-modal {
+    width: 708px;
+  }
+
+  .app-modal__figure {
+    width: 628px;
+  }
+
+  .app-modal__about {
+    flex-direction: column;
+  }
+
+  .app-modal__info-layout {
+    width: 100%;
+    padding-bottom: 33px;
+  }
+
+  .app-modal__info-author {
+    width: 100%;
+    flex-direction: row;
+    min-height: 236px;
+  }
+
+  .info-author__divider {
+    width: 0;
+    height: 196px;
+    // margin-top: 15px;
+    border-bottom: none;
+    border-left: 1px solid #dcdcdc;
+  }
+
+  .app-modal__main {
+    width: 200px
+  }
+
+  .info-author__avatar {
+    margin-top: 0;
+  }
+
+  .info-author__bio {
+    max-width: 340px;
+  }
+}
+
+@media ( max-width: 750px ) {
+  .app-modal {
+    width: 95%;
+  }
+
+  .app-modal__figure {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+
+  .app-modal__cloase-icon {
+    top: 0;
+    right: 2px;
+  }
+
+  .app-modal__cloase-icon .fa {
+    font-size: 18px;
+  }
+
+  .app-modal__header {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .app-modal__meta-row {
+    margin-bottom: 16px;
+  }
+
+  .app-modal__meta-data {
+    font-size: 15px;
+  }
+
+  .app-modal__text p:not(:last-child) {
+    padding-bottom: 15px;
+  }
+
+  .app-modal__info-author {
+    flex-direction: column;
+  }
+
+  .info-author__avatar {
+    margin-top: 20px;
+  }
+
+  .info-author__divider {
+    width: 210px;
+    height: 0;
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  .app-modal__about {
+    padding-left: 15px;
+    padding-right: 17px;
+  }
+}
