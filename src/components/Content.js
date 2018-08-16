@@ -5,10 +5,10 @@ import moment from 'moment';
 import '../scss/Content.scss';
 
 const createShot= (shot, onClick) => (
-  <div className="card" key={shot.id} onClick={onClick.bind(null, shot)}>
+  <div className="card" key={+new Date()} onClick={onClick.bind(null, shot)}>
     <div className="card__preview">
       <div className="card__date">{moment(shot.created_at).format('DD.MM.YYYY')}</div>
-      <img className="card__preview-img" src={shot.images.normal}/>
+      <img className="card__preview-img" src={shot.images.normal}/> 
       <div className="card__preview-img-hover">
         <div className="card__preview-hover-text">{shot.title}</div>
       </div>
@@ -21,7 +21,8 @@ const createShot= (shot, onClick) => (
       </div>
     </div>
   </div>
-)
+);
+
 export default ({shots, onItemClick}) => {
   return (
   <div className="content">

@@ -7,7 +7,6 @@ import Dialog from './containers/dialog';
 
 import './App.scss';
 
-// const AppDialog = Dialog()(DialogContent);
 class App extends Component {
   render() {
     return (

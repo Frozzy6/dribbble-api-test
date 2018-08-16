@@ -26,7 +26,7 @@ const Dialog = function(props) {
           document.body.classList.remove('no-scroll');
         }
         return (
-          <Modal isOpen={isOpen} className="app-modal" overlayClassName="app-overlay">
+          <Modal isOpen={isOpen} className="app-modal" overlayClassName="app-overlay" onRequestClose={this.props.onRequestClose}>
             <DialogContent {...rest}/>
           </Modal>
         )

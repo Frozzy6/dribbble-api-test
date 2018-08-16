@@ -7,29 +7,25 @@ import Content from '../components/Content';
 import DialogView from '../components/DialogContent';
 import DialogContainer from './dialog';
 
-const mapStateToProps = state => {
-  return {
-    shots: state.shots
-  }
-}
+const mapStateToProps = state => ({
+  shots: state.shots
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    fetchData: () => dispatch(fetchShots(dispatch)),
-    onItemClick: id => dispatch(openDialog(id)),
-    handleScroll: () => {
-      const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
-      const body = document.body;
-      const html = document.documentElement;
-      const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
-      const windowBottom = windowHeight + window.pageYOffset;
+const mapDispatchToProps = dispatch => ({
+  fetchData: () => dispatch(fetchShots(dispatch)),
+  onItemClick: id => dispatch(openDialog(id)),
+  handleScroll: () => {
+    const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+    const body = document.body;
+    const html = document.documentElement;
+    const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
+    const windowBottom = windowHeight + window.pageYOffset;
 
-      if (windowBottom >= docHeight ) {
-        dispatch(fetchShots(dispatch))
-      }
+    if (windowBottom >= docHeight ) {
+      dispatch(fetchShots(dispatch, 2))
     }
   }
-}
+})
 
 const contentContainer = function() {
   return  (Content => {

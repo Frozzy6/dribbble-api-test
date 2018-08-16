@@ -4,6 +4,7 @@
 }
 
 .content>.wrap {
+  transition: all 0.3s;
   margin: 0 26px;
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +12,7 @@
 }
 
 .card {
+  transition: all 0.3s;
   display: inline-block;
   background-color: #ffffff;
   box-shadow: 0 0 15.8px 0.2px rgba(0, 0, 0, 0.13);
