@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Modal from 'react-modal';
 
-import { closeDialog, openDialog, fetchShots } from '../actions';
+import { openDialog, fetchShots } from '../actions';
 import Content from '../components/Content';
-import DialogView from '../components/DialogContent';
-import DialogContainer from './dialog';
 
 const mapStateToProps = state => ({
   shots: state.shots
