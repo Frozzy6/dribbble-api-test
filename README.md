@@ -1,6 +1,6 @@
 # dribbble-api-test
 
-Since dribble goes to v2 api this example may doesn't work
+Since dribble goes to v2 api this example may doesn't work.
 If network fails, response data will be replaced by mock
 
 ## Installation
